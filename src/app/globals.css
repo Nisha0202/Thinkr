@@ -14,8 +14,37 @@
   }
 }
 
+@layer utilities{
+  .heading{
+    @apply uppercase px-8 py-4 bg-sky-100 sm:text-2xl md:text-3xl text-center font-work-sans  font-extrabold;
+    -webkit-text-stroke: 0.03px rgb(132, 132, 132);
+  }
+  .bg-custom{
+    @apply bg-sky-50 flex items-center justify-center min-h-[240px] sm:min-h-[300px] pattern
+  }
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.pattern {
+  background-image: linear-gradient(
+    to right,
+    transparent 90%,       /* Adjust this percentage to control the gap */
+    rgb(166, 216, 248) 90%, /* Start the line at 90% */
+    rgb(166, 216, 248)  91%, /* Set the line width */
+    transparent 91%         /* End the line at 91% */
+  );
+  background-size: 56px 100%; /* Increase this to create wider gaps */
+  background-position: center;
+  background-repeat: repeat-x;
+}
+
+@media (max-width: 640px) { /* Adjust for smaller screens (e.g., 640px or less) */
+  .pattern {
+    background-size: 44px 100%;
+  }
 }

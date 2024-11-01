@@ -7,7 +7,7 @@ const Navbar = async () => {
     const session = await auth()
     return (
         <header>
-            <nav className='flex justify-between items-center py-4 '>
+            <nav className='flex justify-between items-center py-4 px-4 sm:px-6 mx-auto text-sm sm:text-base'>
 
                 <div className='font-bold'>
 
@@ -34,7 +34,7 @@ const Navbar = async () => {
 
                             await signIn();
                         }}>
-                            <button type='submit' className='text-sm font-bold text-secondary'> Log In</button>
+                            <button type='submit' className='font-bold text-secondary'> Log In</button>
                         </form>
                     }
 
