@@ -1,6 +1,7 @@
 import React from 'react'
 import { auth, signIn, signOut } from '../../../auth'
 import Link from 'next/link'
+import { LogOut } from 'lucide-react'
 
 const Navbar = async () => {
 
@@ -11,22 +12,25 @@ const Navbar = async () => {
 
                 <div className='font-bold'>
 
-                    <span>Think<span className='text-primary'>r </span></span>
+                    <span>Think<span className='text-primary'>r</span></span>
                 </div>
 
-                <div className='flex items-center gap-5'>
+                <div className='flex items-center gap-5 '>
                     {session?.user ?
-                        <div>
+                        <div className='flex items-center gap-4'>
+                            <Link href={`/user/${session?.user.id}`}>
+                               Hi {session?.user?.name?.split(' ')[0]}!
+                            </Link>
 
-                            <Link href={'/startup/create'}> Create</Link>
+                            {/* <Link href={'/startup/create'}> Create</Link> */}
                             <form action={async () => {
                                 "use server";
-                                await signOut({redirectTo: '/'});
+                                await signOut({ redirectTo: '/' });
                             }}>
-                                <button type='submit'> Log Out</button>
+                                <button type='submit'> <LogOut className='size-4'/></button>
                             </form>
 
-                            <Link href={`/user/${session?.user.id}`}> {session?.user?.name}</Link>
+
 
                         </div>
                         : <form action={async () => {

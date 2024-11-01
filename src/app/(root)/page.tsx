@@ -1,3 +1,4 @@
+import SearchForm from "../component/SearchForm";
 
 export default function Home() {
   return (
@@ -6,6 +7,8 @@ export default function Home() {
         <div className="heading text-white">
           Your Startup <span className="text-primary">Ideas</span> <br /> Our Community
         </div>
+
+        <SearchForm/>
       </section>
 
     </>
