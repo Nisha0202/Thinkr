@@ -11,7 +11,7 @@ const Navbar = async () => {
 
                 <div className='font-bold'>
 
-                    <span>Think<span className='text-[#F9B526]'>r </span></span>
+                    <span>Think<span className='text-primary'>r </span></span>
                 </div>
 
                 <div className='flex items-center gap-5'>
@@ -34,7 +34,7 @@ const Navbar = async () => {
 
                             await signIn();
                         }}>
-                            <button type='submit' className='btn btn-sm text-sm font-bold border-2'> Log In</button>
+                            <button type='submit' className='text-sm font-bold text-secondary'> Log In</button>
                         </form>
                     }
 
