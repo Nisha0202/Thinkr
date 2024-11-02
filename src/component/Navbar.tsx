@@ -1,5 +1,5 @@
 import React from 'react'
-import { auth, signIn, signOut } from '../../../auth'
+import { auth, signIn, signOut } from '../../auth'
 import Link from 'next/link'
 import { LogOut } from 'lucide-react'
 
