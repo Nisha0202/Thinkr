@@ -20,7 +20,7 @@
     -webkit-text-stroke: 0.03px rgb(132, 132, 132);
   }
   .bg-custom{
-    @apply bg-sky-50 flex flex-col gap-6 items-center justify-center min-h-[240px] sm:min-h-[300px] pattern
+    @apply bg-sky-100 rounded flex flex-col gap-6 items-center justify-center min-h-[240px] sm:min-h-[300px] pattern
   }
 }
 

@@ -8,11 +8,11 @@ const Navbar = async () => {
     const session = await auth()
     return (
         <header>
-            <nav className='flex justify-between items-center py-4 px-4 sm:px-6 mx-auto text-sm sm:text-base'>
+            <nav className=' flex justify-between items-center py-4 px-4 sm:px-6 mx-auto text-sm sm:text-base'>
 
-                <div className='font-bold'>
+                <div className='font-extrabold'>
 
-                    <span>Think<span className='text-primary'>r</span></span>
+                    <span>Think<span className='text-primary '>r</span></span>
                 </div>
 
                 <div className='flex items-center gap-5 '>
@@ -27,15 +27,12 @@ const Navbar = async () => {
                                 "use server";
                                 await signOut({ redirectTo: '/' });
                             }}>
-                                <button type='submit'> <LogOut className='size-4'/></button>
+                                <button type='submit' title='Log Out'> <LogOut className='size-4'/></button>
                             </form>
-
-
 
                         </div>
                         : <form action={async () => {
                             "use server";
-
                             await signIn();
                         }}>
                             <button type='submit' className='font-bold text-secondary'> Log In</button>

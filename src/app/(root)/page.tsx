@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <section className=" bg-custom">
         <div className="heading text-white">
-          Your Startup <span className="text-primary">Ideas</span> <br /> Our Community
+        Your Startup <span className="text-primary">Ideas</span> <br />  Win Rewards
         </div>
 
         <SearchForm/>
