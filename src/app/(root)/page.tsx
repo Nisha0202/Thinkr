@@ -1,3 +1,4 @@
+import StartupCard from "@/component/StartupCard";
 import SearchForm from "../../component/SearchForm";
 
 export default async function Home({ searchParams }: { searchParams: Promise<{ query?: string }> }) {
